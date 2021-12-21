@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - entregaLohane</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/entregaLohane.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark" >
+        <!-- Navbar content -->
+        <div class="container-fluid">
+            <div class="col-4">
+                <h1 class="logo">Agência goll p turismo</h1>
+            </div>
+            <div class="col-2">
+                <a asp-action="index">Home</a>
+            </div>
+            <div class="col-2">
+                <a asp-action="Promocoes">Promoções</a>
+            </div>
+            <div class="col-2">
+                <a asp-action="create" asp-controller="Destinoes">Destinos</a>
+            </div>
+            <div class="col-2">
+                <a asp-action="Create" asp-controller="Contatoes">Contato</a>
+            </div>
+        </div>
+      </nav>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - Goll P Viagens e Turismo - 
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

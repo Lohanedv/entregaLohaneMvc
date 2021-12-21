@@ -1,0 +1,53 @@
+﻿@model IEnumerable<entregaLohane.Models.Destino>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nomedestino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroVoo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dataida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.datavolta)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nomedestino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroVoo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dataida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datavolta)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

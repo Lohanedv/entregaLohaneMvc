@@ -1,0 +1,23 @@
+body{
+    background: url(imagens/summer.jpg);
+    background-size: cover;
+}
+.logo{
+    color: aliceblue;
+    font-size: 2em;
+}
+.col-2 a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: rgb(172, 176, 179);
+}
+.col-2 a:hover{
+    color: aliceblue;
+}
+.textoHome {
+    font-size: 1.5em;
+    color: rgb(4, 15, 24);
+    font-size: 1.5em;
+
+}
+
